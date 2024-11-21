@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "backend for todolist application",
+  "main": "server.js",
+  "scripts": {
+    "test": "run test",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "mongodb": "^6.10.0",
+    "serverless-http": "^3.2.0",
+    "uuid": "^11.0.3"
+  },
+  "author": "Rohan",
+  "license": "ISC"
+}
