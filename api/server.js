@@ -18,6 +18,7 @@ app.get('/api',(req,res)=>{
 })
 
 app.get('/api/gettodos',async (req,res)=>{
+    await client.connect()
     const database = client.db('ToDodatabase');
     const listings = database.collection('ToDoCollection');
     const sample_data = listings.find()
@@ -29,8 +30,8 @@ app.get('/api/gettodos',async (req,res)=>{
             note:doc.note
         })
       }
-    res.json(array)
     res.status(200)
+    res.json(array)
 })
 
 app.post('api/addtodo',async (req,res)=>{
